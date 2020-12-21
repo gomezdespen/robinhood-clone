@@ -14,12 +14,12 @@ function Header() {
                     <input placeholder="Search" type="text"></input>
                 </div>
             </div>
-            <div className="header__menueItems">
-                <a href="#"> Free Stocks</a>
-                <a href="#"> Portfolio</a>
-                <a href="#"> Cash</a>
-                <a href="#"> Messages</a>
-                <a href="#"> Account</a>
+            <div className="header__menuItems">
+                <a href="https"> Free Stocks</a>
+                <a href="https"> Portfolio</a>
+                <a href="https"> Cash</a>
+                <a href="https"> Messages</a>
+                <a href="https"> Account</a>
             </div>
              
              
