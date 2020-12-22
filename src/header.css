@@ -40,6 +40,8 @@
 .header__menuItems {
     margin-left: 48px;
     margin-right: 48px;
+    display: flex;
+    flex-direction: row;
    
 }
 
