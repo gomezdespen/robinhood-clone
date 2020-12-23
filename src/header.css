@@ -8,6 +8,7 @@
 
 .header__logo{
     margin-left: 48px ;
+    
 }
 
 .header__search{
@@ -42,6 +43,7 @@
     margin-right: 48px;
     display: flex;
     flex-direction: row;
+    
    
 }
 
