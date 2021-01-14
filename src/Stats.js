@@ -16,21 +16,18 @@ function Stats() {
             .catch((error) => {
                 console.error("ERROR", error.message);
             });
-       
-
     };
 
     useEffect(()=>{
         let tempStocksData =[]
         const stocksList =["AAPL","MSFT","TSLA","BABA", "UBER", "TSLA", "DIS", "SBUX"];
-        
-        let promises =[];
-        
+       
+        let promises = []; 
         stocksList.map((stock) => {
-            promises.push(
+            promises.push ( 
                 getStocksData(stock)
                 .then((res) => {
-                    stocksList.push({
+                    tempStocksData.push({
                         name: stock,
                         ...res.data
                     });
@@ -38,13 +35,15 @@ function Stats() {
             )
         });
         
-        Promise.all(promises).then(()=>{
+        Promise.all(promises).then( () => {
             
             setstockData(tempStocksData);
-            console.log(tempStocksData);
+            console.log(tempStocksData)
+            
+            
         })
+    },[]);
 
-    }, [])
     return (
         <div className="stats">
             <div className="stats__container">
@@ -53,7 +52,7 @@ function Stats() {
                 </div>
                 <div className="stats__content">
                     <div className="stats__row">
- 
+                        
                     </div>
                 </div>
                 <div className="stats__header">
@@ -62,12 +61,13 @@ function Stats() {
                 <div className="stats__content">
                     <div className="stats__row">
                         {stockData.map((stock) =>(
-                                <StatsRow />
-                            ))}
+                            <StatsRow
+                            />
+                        ))}
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     )
 }
 
